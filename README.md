@@ -31,14 +31,6 @@ def bar():
 bar()
 ```
 
-### Custom termination
-```python
-# Using a while loop
-foo = PeekIter(i for i in range(10))
-while foo:
-    print(foo.next, foo.peek)
-```
-
 # Planed
 
 * Add custom terminals.
