@@ -2,6 +2,12 @@
 [PeekIter](https://pypi.python.org/pypi/peekiter) is a __Python3__ package that implements peeking into iterators via a wrapper class.
 Peeking means looking at the next element from a generator without consuming it.
 
+# Install
+
+```
+pip install peekiter
+```
+
 # How to use it
 [Live Demo v0.1](https://repl.it/E6UU/2)
 
