@@ -3,6 +3,7 @@
 Peeking means looking at the next element from a generator without consuming it.
 
 # How to use it
+[Live Demo v0.1](https://repl.it/E6UU/2)
 
 ### While
 ```python
