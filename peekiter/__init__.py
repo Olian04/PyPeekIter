@@ -67,8 +67,29 @@ class PeekIter:
 
         [WARNING]: This utelizes itertools.tee, which makes PeekIter.fork() a highly demanding operation.
         Do NOT use this operation unless absolutely nessessary.
+        [WARNING]: Iterator has to be finit as of the time of the fork.
+            [NOT FINIT, DUE TO INFINIT LOOP "while (true)"]:
+                i = 0
+                while (true):
+                    yield i
+                    i += 1
+            [MIGHT NOT BE FINIT, DUE TO OUTER DEPENDENCY "run"]:
+                i = 0
+                while (run):
+                    yield i
+                    i += 1
+
         """
         from itertools import tee
         _iters = tee(self._iter)
         self._iter = _iters[0]
-        return PeekIter(_iters[1])
+        ret = PeekIter(_iters[1])
+        ret._peeked = self._peeked
+        return ret
+
+
+if __name__ == '__main__':
+    pi1 = PeekIter([1,2,3,4,5,6,7])
+    print(pi1.peek)
+    pi2 = pi1.fork()
+    print(pi2.peek)
