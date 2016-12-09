@@ -9,7 +9,7 @@ pip install peekiter
 ```
 
 # How to use it
-[Live Demo v0.1](https://repl.it/E6UU/2)
+[Live Demo v0.1.1](https://repl.it/E6UU/13)
 
 ### While
 ```python
@@ -36,4 +36,14 @@ def bar():
     if foo:
         bar()
 bar()
+```
+
+### Custom terminal
+
+```python
+foo = PeekIter((i for i in range(10)), terminal=4)
+while foo:
+    print(foo.next) # 0, 1, 2, 3 (terminal is exclusive)
+print(foo.next) # 4 (any further calls will produce the terminal)
+print(foo.peek) # 4 (works with peek as well, ofc)
 ```
