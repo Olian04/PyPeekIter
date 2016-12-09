@@ -37,8 +37,3 @@ def bar():
         bar()
 bar()
 ```
-
-# Planed
-
-* Add custom terminals.
-    * v0.1 uses a hardcoded `None` terminal.
