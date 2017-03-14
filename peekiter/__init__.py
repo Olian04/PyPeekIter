@@ -1,7 +1,7 @@
 """
 [PeekIter]: Wrapper class for iterators, implements peeking.
 """
-__VERSION = "0.1.1"
+__VERSION = "0.1.2"
 __AUTHOR = "Olian04"
 
 class PeekIter:
@@ -21,11 +21,12 @@ class PeekIter:
         self._terminal_reached = False
 
     def __repr__(self):
-        return "PeekIter(done={done}, next='{next}', terminal='{terminal}', inner='{inner}')".format(
-                next=self.peek,
-                done=self.done,
-                terminal=self.terminal,
-                inner=type(self._iter))
+        return "PeekIter(done={done}, next='{next}',  \
+        terminal='{terminal}', inner='{inner}')".format(
+            next=self.peek,
+            done=self.done,
+            terminal=self.terminal,
+            inner=type(self._iter))
 
     def __bool__(self)->bool:
         "Returns True while there are more elements available from the generator"
@@ -66,6 +67,7 @@ class PeekIter:
 
     @property
     def terminal(self):
+        "Returns the terminal value"
         return self._terminal
 
     def _try_next(self):
@@ -84,7 +86,7 @@ class PeekIter:
 
     def fork(self):
         """Forks the generator as is, i.e. in its current state.
-
+        
         [WARNING]: This utelizes itertools.tee, which makes PeekIter.fork() a highly demanding operation.
         Do NOT use this operation unless absolutely nessessary.
         [WARNING]: Iterator has to be finit as of the time of the fork.
