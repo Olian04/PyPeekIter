@@ -9,7 +9,7 @@ pip install peekiter
 ```
 
 # How to use it
-[Live Demo v0.1.1](https://repl.it/E6UU/13)
+[Live Demo v0.1.1](https://repl.it/E6UU/14)
 
 ### While
 ```python
