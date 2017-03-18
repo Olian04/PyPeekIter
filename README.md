@@ -5,7 +5,7 @@ Peeking means looking at the next element from a generator without consuming it.
 # Install
 
 ```
-pip install peekiter
+sudo pip3 install peekiter
 ```
 
 # How to use it
