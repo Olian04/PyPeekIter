@@ -1,15 +1,14 @@
 """
 [PeekIter]: Wrapper class for iterators, implements peeking.
 """
-__VERSION = "0.1.2"
+__VERSION = "0.2.1"
 __AUTHOR = "Olian04"
 
 class PeekIter:
     """PeekIter wrapper class, adds peek, done and next functionality to an iter.
 
     [iterator]: The iterator to wrap.
-        - In v0.1 the iterator may NOT produce None results.
-          None is used internaly to signal end of data.
+    [terminal]: The value to use to indicate the end of iteration.
     """
     class _Nothing:
         pass
@@ -86,7 +85,7 @@ class PeekIter:
 
     def fork(self):
         """Forks the generator as is, i.e. in its current state.
-        
+
         [WARNING]: This utelizes itertools.tee, which makes PeekIter.fork() a highly demanding operation.
         Do NOT use this operation unless absolutely nessessary.
         [WARNING]: Iterator has to be finit as of the time of the fork.

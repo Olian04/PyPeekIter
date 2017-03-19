@@ -5,11 +5,11 @@ Peeking means looking at the next element from a generator without consuming it.
 # Install
 
 ```
-pip install peekiter
+sudo pip3 install peekiter
 ```
 
 # How to use it
-[Live Demo v0.1.1](https://repl.it/E6UU/13)
+[Live Demo v0.2](https://repl.it/E6UU/15)
 
 ### While
 ```python
@@ -47,3 +47,13 @@ while foo:
 print(foo.next) # 4 (any further calls will produce the terminal)
 print(foo.peek) # 4 (works with peek as well, ofc)
 ```
+
+# Version History
+
+## 0.2
+* Now featuring custom `terminals`.
+
+## 0.1
+* Works in `While` loops
+* Works in `For` loops
+* Works in `Recursive` calls
