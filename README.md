@@ -18,16 +18,16 @@ foo = PeekIter(i for i in range(10))
 while foo:
     print(foo.next, foo.peek)
 ```
-### For
 
+### For
 ```python
 # Using a for loop
 foo = PeekIter(i for i in range(10))
 for _next in foo:
     print(_next, foo.peek)
 ```
-### Recursion
 
+### Recursion
 ```python
 # Using recursion
 foo = PeekIter(i for i in range(10))
@@ -50,10 +50,10 @@ print(foo.peek) # 4 (works with peek as well, ofc)
 
 # Version History
 
-## 0.2
+## 1.1
 * Now featuring custom `terminals`.
 
-## 0.1
+## 1.0
 * Works in `While` loops
 * Works in `For` loops
 * Works in `Recursive` calls
