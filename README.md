@@ -9,7 +9,7 @@ sudo pip3 install peekiter
 ```
 
 # How to use it
-[Live Demo v0.2](https://repl.it/E6UU/15)
+[Live Demo v1.1](https://repl.it/E6UU/15)
 
 ### While
 ```python
