@@ -1,3 +1,5 @@
+[![Downloads](https://pepy.tech/badge/peekiter)](https://pepy.tech/project/peekiter) [![Downloads](https://pepy.tech/badge/peekiter/month)](https://pepy.tech/project/peekiter)
+
 # What is PeekIter
 [PeekIter](https://pypi.python.org/pypi/peekiter) is a __Python3__ package that implements peeking into iterators via a wrapper class.
 Peeking means looking at the next element from a generator without consuming it.
